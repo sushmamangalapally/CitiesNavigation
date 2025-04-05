@@ -1,0 +1,86 @@
+body {
+    font-size: 12px;
+    line-height: 1;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Navigation styling */
+.navigation {
+    border-bottom: 1px solid rgb(220, 220, 220);
+    margin: 0 25px;
+}
+
+ul.navigation-menu {
+    list-style: none;
+    margin: 0;
+    padding: 10px 120px;
+    letter-spacing: -0.01em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+li.menu-item {
+    list-style: none;
+}
+
+a.menu-link {
+    text-decoration: none;
+    color: rgb(170, 170, 170);
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    transition: color 0.5s ease;
+}
+
+a.menu-link:hover {
+    color: rgb(0, 102, 204);
+}
+
+.active a {
+    font-weight: 400;
+    color: #000;
+}
+
+span.nav-slider {
+    position: absolute;
+    top: 31.5px;
+    left: 0;
+    height: 1.25px;
+    background: #000;
+    transition: left 0.3s ease;
+}
+
+/* Content for time and date */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 76px 0;
+}
+
+.content .time {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 12px;
+}
+
+.content .date {
+    font-size: 1.5em;
+    font-weight: 100;
+    line-height: 1;
+}
+
+/* If media screen is less than 682px */
+@media only screen and (max-width: 682px) {
+    ul.navigation-menu {
+        display: block;
+        padding-left: 0;
+    }
+
+    .nav-slider {
+        display: none;
+    }
+}
